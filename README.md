@@ -1,4 +1,4 @@
-# TIC TAC TIE
+# TIC TAC TOE
 
 Classic tic-tac-toe with custom markers played in the command line.
 
