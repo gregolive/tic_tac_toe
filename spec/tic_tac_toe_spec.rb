@@ -4,11 +4,13 @@ require_relative '../game'
 require_relative '../logic'
 require_relative '../messages'
 
+# rubocop:disable Metrics/BlockLength
+
 describe Game do
   # Make sure players win when they should
   subject(:game_over) { described_class.new }
 
-  context "when a player gets 3 in a row" do
+  context 'when a player gets 3 in a row' do
     describe '#horizontal_win' do
       it 'returns true when a row contains identical markers' do
         result = game_over.horizontal_win(['X', 'X', 'X', 4, 5, 6, 7, 8, 9])
@@ -48,7 +50,7 @@ describe Game do
         expect(check).to be_truthy
       end
     end
-    
+
     describe '#number_check' do
       it 'should return false if the marker is a non-number' do
         marker = 'F'
@@ -80,3 +82,5 @@ describe Game do
     end
   end
 end
+
+# rubocop:enable Metrics/BlockLength
